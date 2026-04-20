@@ -64,7 +64,7 @@ def main():
     template = env.get_template('template.html')
     args = parse_arguments()
     wines = load_wines_from_excel(args.file_path, args.sheet_name)
-    grouped_wines, sorted_categories = group_wines_by_category(wines)
+    sorted_categories = group_wines_by_category(wines)
     current_year = datetime.now().year
     foundation_year = 1920
     company_age = current_year - foundation_year
