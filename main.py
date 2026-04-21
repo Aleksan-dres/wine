@@ -19,11 +19,8 @@ def group_wines_by_category(wines):
     grouped_wines = defaultdict(list)
     for wine in wines:
         category = wine['Категория']
-        grouped_wines[category].append(wine) 
-
-    grouped_wines = dict(grouped_wines) 
-    sorted_categories = dict(sorted(grouped_wines.items()))    
-    return grouped_wines, sorted_categories
+        grouped_wines[category].append(wine)      
+    return dict(sorted(grouped_wines.items())) 
 
 
 
